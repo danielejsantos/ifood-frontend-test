@@ -23,7 +23,7 @@ You could use Material UI, Bootstrap or any other toolkit to accelerate your res
 
 ## Non functional requirements
 
-As this application will be a worldwide success, it must be prepared to be accessible, responsive, fault tolerant, resilient and have high discoverability.
+As this application will be a worldwide success, it must be prepared to be accessible, responsive, fault tolerant and resilient.
 We **strongly recommend** using React to build the application.
 Also, briefly elaborate on your solution architecture details, choice of patterns and frameworks.
 Fork this repository and submit your code.
