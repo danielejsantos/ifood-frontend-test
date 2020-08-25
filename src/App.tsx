@@ -1,14 +1,21 @@
-import React from 'react';
+import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import GlobalStyles from './styles/GlobalStyles';
+import Login from "./pages/Login";
+import Homepage from "./pages/Homepage";
+
+import GlobalStyles from "./styles/GlobalStyles";
 
 function App() {
   return (
-    <>
-      <h1>Hello world!</h1>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Login />} />
+        <Route path="/home" element={<Homepage />} />
+      </Routes>
 
       <GlobalStyles />
-    </>
+    </BrowserRouter>
   );
 }
 
