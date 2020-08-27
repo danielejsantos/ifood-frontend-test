@@ -18,6 +18,8 @@ const Login: React.FC = () => {
   const [token, setToken] = useState<string | null>(null);
 
   useEffect(() => {
+    setToken(localStorage.getItem("@token"));
+
     if (token) {
       navigate("/home");
     }
@@ -32,13 +34,16 @@ const Login: React.FC = () => {
         });
 
       setToken(data[0]);
+      localStorage.setItem("@token", data[0]);
     }
   }, [token, navigate]);
 
   return (
     <Container>
       <Logo src={logoImg} alt="Spotifood" />
-      <span>Faça login para encontrar as melhores playlists</span>
+      <span>
+        Entre com sua conta do Spotify para encontrar as melhores playlists
+      </span>
       <LoginButton
         href={`${AUTHORIZE_URL}?client_id=${CLIENT_ID}&redirect_uri=${REDIRECT_URI}&response_type=${RESPONSE_TYPE}`}
       >
