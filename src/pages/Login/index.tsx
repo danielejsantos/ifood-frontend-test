@@ -12,13 +12,15 @@ import { Container, Logo, LoginButton } from "./styles";
 
 import logoImg from "../../assets/images/logo.png";
 
+import { setItem, getItem } from "../../services/storage";
+
 const Login: React.FC = () => {
   const navigate = useNavigate();
 
   const [token, setToken] = useState<string | null>(null);
 
   useEffect(() => {
-    setToken(localStorage.getItem("@token"));
+    setToken(getItem());
 
     if (token) {
       navigate("/home");
@@ -34,7 +36,7 @@ const Login: React.FC = () => {
         });
 
       setToken(data[0]);
-      localStorage.setItem("@token", data[0]);
+      setItem(data[0]);
     }
   }, [token, navigate]);
 
