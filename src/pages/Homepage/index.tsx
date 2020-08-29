@@ -29,8 +29,6 @@ const Homepage: React.FC = () => {
     }
   }, [navigate]);
 
-  console.log(filtersData);
-
   return (
     <Container>
       <Header>
@@ -53,7 +51,7 @@ const Homepage: React.FC = () => {
         </SearchWrapper>
       </Header>
 
-      <FeaturedPlaylist />
+      <FeaturedPlaylist filtersData={filtersData} />
     </Container>
   );
 };
