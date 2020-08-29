@@ -1,10 +1,10 @@
 import styled from "styled-components";
 
 export const SelectBlock = styled.div`
-  position: relative;
+  margin-bottom: 3px;
 
-  label {
-    font-size: 14px;
+  @media (min-width: 800px) {
+    margin-right: 5px;
   }
 `;
 
@@ -19,5 +19,9 @@ export const Select = styled.select`
 
   :focus {
     border: 1px solid #ea1d2c;
+  }
+
+  @media (min-width: 900px) {
+    width: 170px;
   }
 `;
