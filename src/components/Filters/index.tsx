@@ -12,6 +12,8 @@ import { API_MOCKY } from "../../services/apis";
 import Select from "../Select";
 import Input from "../Input";
 
+import { Form } from "./styles";
+
 interface FiltersProps {
   setFiltersData: (value: any) => void;
   filtersData: FiltersValueProps;
@@ -31,14 +33,18 @@ const Filters: React.FC<FiltersProps> = ({ setFiltersData, filtersData }) => {
   }, [setFilterOptions]);
 
   return (
-    <>
+    <Form>
       <Select
         value={filtersData.locale}
         options={mapValues(0, filtersOptions) || []}
         onChange={(e) =>
           setFiltersData({ type: "locale", payload: e.target.value })
         }
-      />
+      >
+        <option value="" disabled hidden>
+          Selecione uma opção
+        </option>
+      </Select>
       <Select
         value={filtersData.country}
         options={mapValues(1, filtersOptions) || []}
@@ -71,7 +77,7 @@ const Filters: React.FC<FiltersProps> = ({ setFiltersData, filtersData }) => {
           setFiltersData({ type: "offset", payload: Number(e.target.value) })
         }
       />
-    </>
+    </Form>
   );
 };
 
