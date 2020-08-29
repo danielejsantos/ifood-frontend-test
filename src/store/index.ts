@@ -1,9 +1,10 @@
 import { FiltersValueProps, ActionType } from "../pages/Homepage/types";
+import { timestamp } from "../helpers/index";
 
 export const initialState = {
   locale: "pt_BR",
   country: "BR",
-  timestamp: 0,
+  timestamp: timestamp,
   limit: 5,
   offset: 1,
 };
