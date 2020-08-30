@@ -21,6 +21,7 @@ This project architecture was created in order to support its growth and keep it
 
 **Project Tree**
 
+```
 ├── public
 │ ├── favicon.ico
 │ ├── index.html
@@ -71,6 +72,7 @@ This project architecture was created in order to support its growth and keep it
 ├── README.md
 ├── tsconfig.json
 ├── yarn.lock
+```
 
 The simplified version of the project tree is described below:
 
