@@ -28,30 +28,28 @@ export interface ArrayOfValues {
 export interface ArrayOfTimestampValidation {
   id: string;
   name: string;
-  validation: TimestampValidation[];
+  validation: TimestampValidation;
 }
 
 export interface ArrayOfLimitValidation {
   id: string;
   name: string;
-  validation: Validation[];
+  validation: Validation;
 }
 
 export interface ArrayOfOffsetValidation {
   id: string;
   name: string;
-  validation: Validation[];
+  validation: Validation;
 }
 
 export interface FiltersOptionsProps {
   filters: [
-    {
-      locale: ArrayOfValues[];
-      country: ArrayOfValues[];
-      timestamp: ArrayOfTimestampValidation[];
-      timestamp: ArrayOfLimitValidation[];
-      timestamp: ArrayOfOffsetValidation[];
-    }
+    ArrayOfValues[],
+    ArrayOfValues[],
+    ArrayOfTimestampValidation,
+    ArrayOfLimitValidation,
+    ArrayOfOffsetValidation
   ];
 }
 
