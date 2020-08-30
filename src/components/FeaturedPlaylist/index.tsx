@@ -3,6 +3,7 @@ import React from "react";
 import {
   Container,
   TitleWrapper,
+  StyledMusicNoteIcon as MusicNoteIcon,
   PlaylistWrapper,
   Card,
   PlaylistImage,
@@ -25,6 +26,7 @@ const FeaturedPlaylist: React.FC<FeaturedPlaylistProps> = ({
     <Container>
       <TitleWrapper>
         <span>{message}</span>
+        <MusicNoteIcon />
       </TitleWrapper>
       <PlaylistWrapper>
         {playlists?.map((playlist) => (
