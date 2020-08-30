@@ -1,44 +1,122 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# iFood Frontend Test
 
-## Available Scripts
+All the instructions, architecture and decisions about the project can be founded below.
 
-In the project directory, you can run:
+## Language and Framework
 
-### `yarn start`
+Following the challenge recommendation, it was used JavaScript and its framework, React.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Dependencies
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+- **TypeScript**: it types the code at runtime
+- **Styled Components**: it optimizes the styling experience for React components.
+- **React-router-dom**: it provides a better rendering to the different routes inside a SPA.
+- **Axios**: used to access APIs, it gives you the ability to take advantage of JavaScript's _async_ and _await_ for more readable asynchronous code.
+- **Material-ui/icons**: an easier way to get svg icons as React components.
+- **Date-fns**: it provides the most comprehensive, yet simple and consistent toolset for manipulating JavaScript dates.
 
-### `yarn test`
+## Architecture
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+This project architecture was created in order to support its growth and keep it organized.
 
-### `yarn build`
+**Project Tree**
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+├── public
+│ ├── favicon.ico
+│ ├── index.html
+│ ├── mainifest.json
+│ └── robots.txt
+├── src
+│ ├── assets
+│ │ └── images
+│ │ └── logo.png
+│ ├── components
+│ │ ├── FeaturedPlaylist
+│ │ │ ├── index.tsx
+│ │ │ ├── styles.ts
+│ │ │ └── types.d.ts
+│ │ ├── Filters
+│ │ │ ├── index.tsx
+│ │ │ └── styles.ts
+│ │ ├── Input
+│ │ │ ├── index.tsx
+│ │ │ └── styles.ts
+│ │ └── Select
+│ │ ├── index.tsx
+│ │ └── styles.ts
+│ ├── helpers
+│ │ └── index.ts
+│ ├── pages
+│ │ ├── Homepage
+│ │ │ ├── index.tsx
+│ │ │ ├── styles.ts
+│ │ │ └── types.d.ts
+│ │ └── Login
+│ │ ├── index.tsx
+│ │ └── styles.ts
+│ ├── services
+│ │ ├── apis.ts
+│ │ └── storage.ts
+│ ├── store
+│ │ └── index.ts
+│ ├── styles
+│ │ └── GlobalStyles.ts
+│ ├── App.tsx
+│ ├── config.ts
+│ ├── index.tsx
+│ └── react-app-env.d.ts
+├── .gitignore
+├── package.json
+├── package-lock.json
+├── README.md
+├── tsconfig.json
+├── yarn.lock
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+The simplified version of the project tree is described below:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- **components**: react components used inside the pages and that can be reusable.
+- **helpers**: util functions
+- **pages**: application screens
+- **services**: APIs and localStorage functions
+- **store**: homepage reducer and state
+- **styles**: global styles to be used in the entire application
 
-### `yarn eject`
+The project is visually structured by two pages created to be navigated by `react-router-dom`. The Login page has a button that redirects the user to Spotify authentication page. Then the user is redirected to the Homepage.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Homepage has a header, which contains a search bar and a filter button that once clicked can show some more advanced filters: language, country, date and time, number of playlists and number of pages.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+The entire application was built with the concept of Mobile First and responsive layout.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+In order to keep users logged in, it was used _Local Storage_.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+As it isn't a considerably large application, the state is controlled by _React Hooks_.
 
-## Learn More
+## Settings
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+You must have Git installed in your machine to download the following GitHub repository:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- https://github.com/danielejsantos/spotifood
+
+Or you can download it by following the command:
+
+`git clone https://github.com/danielejsantos/spotifood.git`
+
+Then, you must install its dependencies. At the root, run the command:
+
+```
+# with yarn:
+yarn install
+# with npm:
+npm install
+```
+
+## How to run
+
+Navigate to the root folder and run the following command:
+
+```
+# with yarn:
+yarn start
+# with npm:
+npm start
+```
