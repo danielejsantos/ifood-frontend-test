@@ -1,6 +1,6 @@
 # iFood Frontend Test
 
-All the instructions, architecture and decisions about the project can be founded below.
+All the instructions, architecture and decisions about the project can be found below.
 
 ## Language and Framework
 
