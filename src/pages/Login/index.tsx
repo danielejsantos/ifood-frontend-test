@@ -26,7 +26,7 @@ const Login: React.FC = () => {
       navigate("/home");
     }
 
-    if (!token) {
+    if (!token && window.location.hash) {
       const data = window.location.hash
         .substring(1)
         .split("&")
@@ -34,6 +34,8 @@ const Login: React.FC = () => {
           const info = item.split("=");
           return info[1];
         });
+
+      if (!data) return;
 
       setToken(data[0]);
       setItem(data[0]);
