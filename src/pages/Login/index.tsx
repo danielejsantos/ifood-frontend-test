@@ -13,15 +13,23 @@ import { Container, Logo, LoginButton } from "./styles";
 import logoImg from "../../assets/images/logo.png";
 
 import { setItem, getItem } from "../../services/storage";
+import { API_SPOTIFY } from "../../services/apis";
 
 const Login: React.FC = () => {
   const navigate = useNavigate();
 
-  const [token, setToken] = useState<string | null>(null);
+  const [token, setToken] = useState<string | null>(() => {
+    const accessToken = getItem();
+
+    if (accessToken) {
+      API_SPOTIFY.defaults.headers.authorization = `Bearer ${accessToken}`;
+      return accessToken;
+    }
+
+    return null;
+  });
 
   useEffect(() => {
-    setToken(getItem());
-
     if (token) {
       navigate("/home");
     }
