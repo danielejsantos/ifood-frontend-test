@@ -23,49 +23,49 @@ This project architecture was created in order to support its growth and keep it
 
 ```
 ├── public
-│ ├── favicon.ico
-│ ├── index.html
-│ ├── mainifest.json
-│ └── robots.txt
+│  ├── favicon.ico
+│  ├── index.html
+│  ├── mainifest.json
+│  └── robots.txt
 ├── src
-│ ├── assets
-│ │ └── images
-│ │ └── logo.png
-│ ├── components
-│ │ ├── FeaturedPlaylist
-│ │ │ ├── index.tsx
-│ │ │ ├── styles.ts
-│ │ │ └── types.d.ts
-│ │ ├── Filters
-│ │ │ ├── index.tsx
-│ │ │ └── styles.ts
-│ │ ├── Input
-│ │ │ ├── index.tsx
-│ │ │ └── styles.ts
-│ │ └── Select
-│ │ ├── index.tsx
-│ │ └── styles.ts
-│ ├── helpers
-│ │ └── index.ts
-│ ├── pages
-│ │ ├── Homepage
-│ │ │ ├── index.tsx
-│ │ │ ├── styles.ts
-│ │ │ └── types.d.ts
-│ │ └── Login
-│ │ ├── index.tsx
-│ │ └── styles.ts
-│ ├── services
-│ │ ├── apis.ts
-│ │ └── storage.ts
-│ ├── store
-│ │ └── index.ts
-│ ├── styles
-│ │ └── GlobalStyles.ts
-│ ├── App.tsx
-│ ├── config.ts
-│ ├── index.tsx
-│ └── react-app-env.d.ts
+│  ├── assets
+│  │  └── images
+│  │      └── logo.png
+│  ├── components
+│  │  ├── FeaturedPlaylist
+│  │  │  ├── index.tsx
+│  │  │  ├── styles.ts
+│  │  │  └── types.d.ts
+│  │  ├── Filters
+│  │  │  ├── index.tsx
+│  │  │  └── styles.ts
+│  │  ├── Input
+│  │  │  ├── index.tsx
+│  │  │  └── styles.ts
+│  │  └── Select
+│  │     ├── index.tsx
+│  │     └── styles.ts
+│  ├── helpers
+│  │  └── index.ts
+│  ├── pages
+│  │  ├── Homepage
+│  │  │  ├── index.tsx
+│  │  │  ├── styles.ts
+│  │  │  └── types.d.ts
+│  │  └── Login
+│  │     ├── index.tsx
+│  │     └── styles.ts
+│  ├── services
+│  │  ├── apis.ts
+│  │  └── storage.ts
+│  ├── store
+│  │  └── index.ts
+│  ├── styles
+│  │  └── GlobalStyles.ts
+│  ├── App.tsx
+│  ├── config.ts
+│  ├── index.tsx
+│  └── react-app-env.d.ts
 ├── .gitignore
 ├── package.json
 ├── package-lock.json
