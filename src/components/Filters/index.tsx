@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 
 import {
   FiltersOptionsProps,
@@ -6,8 +6,6 @@ import {
 } from "../../pages/Homepage/types";
 
 import { mapValues, timestamp } from "../../helpers";
-
-import { API_MOCKY } from "../../services/apis";
 
 import Select from "../Select";
 import Input from "../Input";
@@ -17,20 +15,15 @@ import { Form } from "./styles";
 interface FiltersProps {
   setFiltersData: (value: any) => void;
   filtersData: FiltersValueProps;
+  filtersOptions: FiltersOptionsProps | null;
 }
 
-const Filters: React.FC<FiltersProps> = ({ setFiltersData, filtersData }) => {
-  const [
-    filtersOptions,
-    setFilterOptions,
-  ] = useState<FiltersOptionsProps | null>(null);
-
-  useEffect(() => {
-    (async () => {
-      const { data } = await API_MOCKY.get("/5a25fade2e0000213aa90776");
-      setFilterOptions(data);
-    })();
-  }, [setFilterOptions]);
+const Filters: React.FC<FiltersProps> = ({
+  filtersOptions,
+  setFiltersData,
+  filtersData,
+}) => {
+  console.log(mapValues(1, filtersOptions));
 
   return (
     <Form>
@@ -40,11 +33,7 @@ const Filters: React.FC<FiltersProps> = ({ setFiltersData, filtersData }) => {
         onChange={(e) =>
           setFiltersData({ type: "locale", payload: e.target.value })
         }
-      >
-        <option value="" disabled hidden>
-          Selecione uma opção
-        </option>
-      </Select>
+      />
       <Select
         value={filtersData.country}
         options={mapValues(1, filtersOptions) || []}
@@ -80,5 +69,4 @@ const Filters: React.FC<FiltersProps> = ({ setFiltersData, filtersData }) => {
     </Form>
   );
 };
-
 export default Filters;
