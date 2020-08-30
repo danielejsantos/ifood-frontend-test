@@ -14,7 +14,6 @@ export const Select = styled.select`
   border-radius: 6px;
   border: 1px solid #b8b8b8;
   outline: 0;
-  padding: 16px;
   font-size: 16px;
 
   :focus {
