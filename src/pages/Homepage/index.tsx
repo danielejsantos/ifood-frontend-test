@@ -13,10 +13,15 @@ import {
 
 import FeaturedPlaylist from "../../components/FeaturedPlaylist";
 import Filters from "../../components/Filters";
+
 import logoImg from "../../assets/images/logo.png";
+
 import { initialState, reducer } from "../../store";
+
 import { API_SPOTIFY, API_MOCKY } from "../../services/apis";
+
 import { FeaturedPlaylistStateProps, FiltersOptionsProps } from "./types";
+
 import { ItemsProps } from "../../components/FeaturedPlaylist/types";
 
 const Homepage: React.FC = () => {
