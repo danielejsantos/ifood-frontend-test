@@ -2,6 +2,16 @@
 
 All the instructions, architecture and decisions about the project can be found below.
 
+## App
+
+**For desktop device**
+
+![Spotifood Desktop](https://github.com/danielejsantos/spotifood/blob/master/src/assets/images/spotifood-desktop.gif "Spotifood Desktop")
+
+**For mobile device**
+
+![Spotifood Desktop](https://github.com/danielejsantos/spotifood/blob/master/src/assets/images/spotifood-mobile.gif "Spotifood Desktop")
+
 ## Language and Framework
 
 Following the challenge recommendation, it was used JavaScript and its framework, React.
